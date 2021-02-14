@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/alexeyabramenko/myserver/issues"
   },
-  "homepage": "https://github.com/alexeyabramenko/myserver#readme"
+  "homepage": "https://github.com/alexeyabramenko/myserver#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "path": "^0.12.7"
+  }
 }

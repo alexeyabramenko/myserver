@@ -1,8 +1,14 @@
 const http = require('http');
 const fs = require('fs');
 const server = http.createServer((req, res) => {
-    const body = fs.readFileSync(`.project/index.html`);
-    res.end(body);
+    const arrUrl = [req.url];
+    let body = null;
+    arrUrl.forEach( url => {
+        if (url != 'favicon.ico'){
+            body = fs.readFileSync(`./online-store${url}`);
+            res.end(body);
+        }
+    });
 });
 
 const port = process.env.PORT || 3000;
