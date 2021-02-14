@@ -2,9 +2,8 @@ const http = require('http');
 const fs = require('fs');
 const server = http.createServer((req, res) => {
     const arrUrl = [req.url];
-    let body = null;
     arrUrl.forEach( url => {
-        body = fs.readFileSync(`./online-store${url}`);
+        let body = fs.readFileSync(`./online-store${url}`);
         res.end(body);
         
     });
