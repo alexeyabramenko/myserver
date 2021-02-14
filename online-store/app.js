@@ -4,9 +4,7 @@
 let registrationBtn = document.getElementById('btnReg');
 
 registrationBtn.addEventListener('click', function(event){
-    let json = (scr)
-    event.target.
-})
+});
 
 let btnAddToCard = document.querySelectorAll('#addCard');
 
