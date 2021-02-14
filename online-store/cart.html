@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPING CART</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5df8e5195d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header center">
+        <div class="header__left">
+            <a class="header__logo" href="index.html"><img src="image/logo.svg" alt="logo"></a>
+            <a href="#"><img class="header__search" src="image/search.svg" alt="search"></a>
+        </div>
+        <div class="header__right">
+            <input id="switcher" type="checkbox">
+            <label class="header__menu" for="switcher"><img src="image/menu.svg" alt="menu"></label>
+            <nav class="drop">
+                <span class="drop__name">MENU</span>
+                <div class="drop__box">
+                    <a href="catalog.html" class="drop__heading">MAN</a>
+                    <ul class="drop__ul">
+                        <li class="drop__li"><a class="drop__link" href="#">Accessories</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Bags</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Denim</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">T-Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="drop__box">
+                    <a href="catalog.html" class="drop__heading">WOMAN</a>
+                    <ul class="drop__ul">
+                        <li class="drop__li"><a class="drop__link" href="#">Accessories</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Jackets & Coats</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Polos</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">T-Shirts</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="drop__box">
+                    <a href="catalog.html" class="drop__heading">KIDS</a>
+                    <ul class="drop__ul">
+                        <li class="drop__li"><a class="drop__link" href="#">Accessories</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Jackets & Coats</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Polos</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">T-Shirts</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Shirts</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Bags</a></li>
+                    </ul>
+                </div>
+                <button class="drop__close"><img src="image/close_button_menu.svg" alt="close"></button>
+            </nav>
+            <a class="header__profile" href="registration.html"><img class="header__profile" src="image/profile.svg" alt="profile"></a>
+            <a class="header__cart" href="cart.html"><img src="image/card.svg" alt="card"></a>
+        </div>
+    </header>
+
+    <section class="navigation center">
+        <a class="nav__main" href="#">SHOPPING CART</a>
+    </section>
+
+    <div class="cart center">
+        <div class="cart__content">
+            <div class="card card_mb">
+                <img src="image/catalog_product3.jpg" alt="card__image" class="card-image">
+                <div class="card__info">
+                    <a href="product.html" class="card__heading">MANGO PEOPLE T-SHIRT</a>
+                    <p class="card__price">Price: </p>
+                    <p class="card__price card__price_color">$300</p>
+                    <p class="card__text">Color: Red</p>
+                    <p class="card__text">Size: Xl</p>
+                    <p class="card__text">Quantity:	<input class="card__input" type="number" min="1" max="5" value="2"></p>
+                    <button class="card__remove-product"><img src="image/close-button.svg" alt="close-button"></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image/catalog_product2.jpg" alt="card__image" class="card-image">
+                <div class="card__info">
+                    <a href="product.html" class="card__heading">MANGO PEOPLE T-SHIRT</a>
+                    <p class="card__price">Price: <p class="card__price card__price_color">$300</p></p>
+                    <p class="card__text">Color: Red</p>
+                    <p class="card__text">Size: Xl</p>
+                    <p class="card__text">Quantity:	<input class="card__input" type="number" min="1" max="5" value="2"></p>
+                </div>
+                <button class="card__remove-product"><img src="image/close-button.svg" alt="close-button"></button>
+            </div>
+            <div class="card__buttons">
+                <button class="card__button">CLEAR SHOPPING CART</button>
+                <button class="card__button">CONTINUE SHOPPING</button>
+            </div>
+        </div>
+        <div class="cart__purchase-info">
+            <form action="" class="shipping-address">
+                <h3 class="shipping-address__heading">SHIPPING ADRESS</h3>
+                <input type="text" class="shipping-address__input_city" placeholder="Bangladesh" required pattern="^[a-zA-Z]+$">
+                <input type="text" class="shipping-address__input" placeholder="State" required pattern="^[a-zA-Z]+$">
+                <input type="text" class="shipping-address__input" placeholder="Postcode / Zip" required pattern="[0-9]{6}">
+                <button class="shipping-address__button">GET A QUOTE</button>
+            </form>
+            <div class="purchase">
+                <p class="purchase__price">SUB TOTAL $900</p>
+                <div class="purchase__price_box">
+                    <p class="purchase__price_grand">GRAND TOTAL</p>
+                    <p class="purchase__price_color">$900</p>
+                </div>
+                <hr class="purchase__hr">
+                <button class="purchase__button">PROCEED TO CHECKOUT</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__subscribe">
+            <div class="footer__subscribe__content center">
+                <div class="footer__subscribe__left">
+                    <img class="footer__subscribe__left__photo" src="image/photo.png" alt="photo">
+                    <p class="subscribe__content__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+                </div>
+                <div class="footer__subscribe__right">
+                    <h3 class="subscribe__content__heading">SUBSCRIBE</h3>
+                    <p class="subscribe__content__text right">FOR OUR NEWLETTER AND PROMOTION</p>
+                    <form class="form" action="">
+                        <input class="email" type="email" required placeholder="Enter Your Email">
+                        <button class="input__text">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__contacts center">
+            <div class="copyright">&copy; 2021  Brand  All Rights Reserved.</div>
+            <div class="footer__icons">
+                <a href="#" class="footer_icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer_icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="footer_icon">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href="#" class="footer_icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
