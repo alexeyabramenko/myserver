@@ -1,11 +1,5 @@
 'use strict'
 
-
-let registrationBtn = document.getElementById('btnReg');
-
-registrationBtn.addEventListener('click', function(event){
-});
-
 let btnAddToCard = document.querySelectorAll('#addCard');
 
 btnAddToCard.forEach(button => {
