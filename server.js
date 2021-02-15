@@ -1,12 +1,8 @@
 const http = require('http');
 const fs = require('fs');
 const server = http.createServer((req, res) => {
-    const arrUrl = [req.url];
-    arrUrl.forEach( url => {
-        let body = fs.readFileSync(`./online-store${url}`);
-        res.end(body);
-        
-    });
+    const body = fs.readFileSync(`./online-store${req.url}`);
+    res.end(body);
 });
 
 const port = process.env.PORT || 3000;

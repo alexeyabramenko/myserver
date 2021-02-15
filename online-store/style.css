@@ -1476,6 +1476,9 @@ input::-webkit-inner-spin-button {
     margin: 0 auto;
     width: initial;
   }
+  .catalog__item:last-child {
+    display: none;
+  }
 }
 
 @media (max-width: 1023px) {
