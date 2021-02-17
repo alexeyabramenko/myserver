@@ -2,13 +2,16 @@
   "name": "myserver",
   "version": "1.0.0",
   "description": "new server",
-  "main": "index.js",
-  "scripts": {},
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexeyabramenko/myserver.git"
   },
-  "author": "",
+  "author": "Alexey",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alexeyabramenko/myserver/issues"

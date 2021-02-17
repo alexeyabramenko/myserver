@@ -6,8 +6,12 @@ const path = require('path');
 
 const server = http.createServer((req, res) => {
     let filePath = './' + req.url
-    res.setHeader('Content-Type', mime.getType(filePath));
-    fs.createReadStream(filePath).pipe(res);
+    try {
+        res.setHeader('Content-Type', mime.getType(filePath));
+        fs.createReadStream(filePath).pipe(res);
+    } catch (err) {
+        fs.createReadStream('./index.html').pipe(res);
+    }
 });
 
 const port = process.env.PORT || 3000;
