@@ -5,12 +5,12 @@ const path = require('path');
 
 
 const server = http.createServer((req, res) => {
-    let filePath = './' + req.url
+    let filePath = './onlinestore' + req.url
     try {
         res.setHeader('Content-Type', mime.getType(filePath));
         fs.createReadStream(filePath).pipe(res);
     } catch (err) {
-        fs.createReadStream('./index.html').pipe(res);
+        fs.createReadStream('./onlinestore/index.html').pipe(res);
     }
 });
 
