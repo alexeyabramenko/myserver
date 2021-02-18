@@ -6,12 +6,13 @@ const path = require('path');
 
 const server = http.createServer((req, res) => {
     let filePath = './onlinestore' + req.url
+    let body = null;
     try {
         res.setHeader('Content-Type', mime.getType(filePath));
-        const body = fs.readFileSync(filePath);
+        body = fs.readFileSync(filePath);
         // fs.createReadStream(filePath).pipe(res);
     } catch (err) {
-        const body = fs.readFileSync('./onlinestore/index.html');
+        body = fs.readFileSync('./onlinestore/index.html');
         // fs.createReadStream('./onlinestore/index.html').pipe(res);
     }
 });
