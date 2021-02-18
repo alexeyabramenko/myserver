@@ -8,9 +8,11 @@ const server = http.createServer((req, res) => {
     let filePath = './onlinestore' + req.url
     try {
         res.setHeader('Content-Type', mime.getType(filePath));
-        fs.createReadStream(filePath).pipe(res);
+        const body = fs.readFileSync(filePath);
+        // fs.createReadStream(filePath).pipe(res);
     } catch (err) {
-        fs.createReadStream('./onlinestore/index.html').pipe(res);
+        const body = fs.readFileSync('./onlinestore/index.html');
+        // fs.createReadStream('./onlinestore/index.html').pipe(res);
     }
 });
 
