@@ -202,10 +202,9 @@ a
     &__content
         padding-bottom: 20px
         display: flex
-        justify-content: center
+        justify-content: space-between
         flex-wrap: wrap
-        flex-basis: 360px
-        gap: 30px
+        margin-left: 30px
     
     &__box
         display: flex
@@ -222,6 +221,9 @@ a
         background: #F8F8F8
         position: relative
         flex-grow: 1
+        flex-basis: 360px
+        margin-left: -30px
+        margin-bottom: 30px
         transition: $hoverTransition
         &:hover
             transform: $hoverTransform      
@@ -232,6 +234,8 @@ a
                 background: none
                 display: flex
                 z-index: 1
+        &:first-child
+        
 
         &__content
             padding: 24px 16px 20px
@@ -987,9 +991,12 @@ input::-webkit-inner-spin-button
             margin: 0 auto
             width: initial
 
-    .catalog__item:last-child
-        display: none
-
+    .catalog
+        &__content
+            justify-content: center
+            margin-left: 0px
+        &__item
+            margin-left: 30px
 
 @media ( max-width: 1023px)
     .center
@@ -1052,7 +1059,11 @@ input::-webkit-inner-spin-button
         &__content
             padding-bottom: 0px
             justify-content: center
-            gap: 16px
+        
+        &__item
+            margin-left: 30px
+            margin-bottom: 30px
+
 
     .privilege
         margin-top: 0
@@ -1141,6 +1152,10 @@ input::-webkit-inner-spin-button
             margin-top: 64px
         &__button
             margin-top: 40px
+        &__item
+            margin: 0 auto
+            margin-bottom: 16px
+            max-width: 360px   
 
     .footer
         &__subscribe

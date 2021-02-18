@@ -11,11 +11,9 @@ const server = http.createServer((req, res) => {
         res.setHeader('Content-Type', mime.getType(filePath));
         body = fs.readFileSync(filePath);
         res.end(body);
-        // fs.createReadStream(filePath).pipe(res);
     } catch (err) {
         body = fs.readFileSync('./onlinestore/index.html');
         res.end(body);
-        // fs.createReadStream('./onlinestore/index.html').pipe(res);
     }
 });
 
