@@ -7,7 +7,8 @@ const path = require('path');
 const server = http.createServer((req, res) => {
     let filePath = './onlinestore' + req.url
     try {
-        if (req.url == '/favicon.ico') {
+        if (req.url === '/favicon.ico') {
+            console.log(req.url);
             res.setHeader('Content-Type', 'image');
             fs.createReadStream('./onlinestore/favicon.ico').pipe(res);
         }
