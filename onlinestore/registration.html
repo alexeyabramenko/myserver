@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5df8e5195d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header center">
+        <div class="header__left">
+            <a class="header__logo" href="index.html"><img src="image/logo.svg" alt="logo"></a>
+            <a href="#"><img class="header__search" src="image/search.svg" alt="search"></a>
+        </div>
+        <div class="header__right">
+            <input id="switcher" type="checkbox">
+            <label class="header__menu" for="switcher"><img src="image/menu.svg" alt="menu"></label>
+            <nav class="drop">
+                <span class="drop__name">MENU</span>
+                <div class="drop__box">
+                    <a href="catalog.html" class="drop__heading">MAN</a>
+                    <ul class="drop__ul">
+                        <li class="drop__li"><a class="drop__link" href="#">Accessories</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Bags</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Denim</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">T-Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="drop__box">
+                    <a href="catalog.html" class="drop__heading">WOMAN</a>
+                    <ul class="drop__ul">
+                        <li class="drop__li"><a class="drop__link" href="#">Accessories</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Jackets & Coats</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Polos</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">T-Shirts</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="drop__box">
+                    <a href="catalog.html" class="drop__heading">KIDS</a>
+                    <ul class="drop__ul">
+                        <li class="drop__li"><a class="drop__link" href="#">Accessories</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Jackets & Coats</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Polos</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">T-Shirts</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Shirts</a></li>
+                        <li class="drop__li"><a class="drop__link" href="#">Bags</a></li>
+                    </ul>
+                </div>
+                <button class="drop__close"><img src="image/close_button_menu.svg" alt="close"></button>
+            </nav>
+            <a class="header__profile" href="registration.html"><img class="header__profile" src="image/profile.svg" alt="profile"></a>
+            <a class="header__cart" href="cart.html"><img src="image/card.svg" alt="card"></a>
+        </div>
+    </header>
+
+    <section class="navigation center">
+        <a class="nav__main" href="#">REGISTRATION</a>
+    </section>
+
+    <div class="registration center">
+        <div class="registration-card">
+            <form action="" class="registration-card__from">
+                <h3 class="registration-card__heading">Your Name</h3>
+                <input type="text" class="registration-card__input" placeholder="First Name" required>
+                <input type="text" class="registration-card__input" placeholder="Last Name" required>
+                <div class="registration-card__gender">
+                    <input id="male" class="registration-card__radio" name="gender" type="radio" required>
+                    <label class="registration-card__label" for="male">Male</label>
+                    <input id="female" class="registration-card__radio" name="gender" type="radio" required>
+                    <label class="registration-card__label" for="female">Female</label>
+                </div>
+                <h3 class="registration-card__heading">Login details</h3>
+                <input type="email" class="registration-card__input" placeholder="Email" required>
+                <input type="password" class="registration-card__input" placeholder="Password" required>
+                <p class="registration-card__info">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
+                <button id="btnReg" class="registration-card__button">JOIN NOW</button>
+            </form>
+            
+        </div>
+        <div class="registration-loyality">
+            <h3 class="registration-loyality__heading">LOYALTY HAS ITS PERKS</h3>
+            <p class="registration-loyality__text">Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</p>
+            <ul class="registration-loyality__list">
+                <li>15% off welcome offer</li>
+                <li>Free shipping, returns and exchanges on all orders</li>
+                <li>$10 off a purchase on your birthday</li>
+                <li>Early access to products</li>
+                <li>Exclusive offers & rewards</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer__subscribe">
+            <div class="footer__subscribe__content center">
+                <div class="footer__subscribe__left">
+                    <img class="footer__subscribe__left__photo" src="image/photo.png" alt="photo">
+                    <p class="subscribe__content__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+                </div>
+                <div class="footer__subscribe__right">
+                    <h3 class="subscribe__content__heading">SUBSCRIBE</h3>
+                    <p class="subscribe__content__text right">FOR OUR NEWLETTER AND PROMOTION</p>
+                    <form class="form" action="">
+                        <input class="email" type="email" required placeholder="Enter Your Email">
+                        <button class="input__text">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__contacts center">
+            <div class="copyright">&copy; 2021  Brand  All Rights Reserved.</div>
+            <div class="footer__icons">
+                <a href="#" class="footer_icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer_icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="footer_icon">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href="#" class="footer_icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
