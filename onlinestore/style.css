@@ -1487,6 +1487,23 @@ input::-webkit-inner-spin-button {
   .catalog__item {
     margin-left: 30px;
   }
+  .registration {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 40px;
+  }
+  .registration-card {
+    margin-right: 22px;
+  }
+  .registration-loyality {
+    width: 353px;
+  }
+  .registration-loyality__heading, .registration-loyality__text, .registration-loyality__list {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1727,6 +1744,19 @@ input::-webkit-inner-spin-button {
   .right {
     font-size: 14px;
     line-height: 22px;
+  }
+  .nav__main {
+    margin: 0 auto;
+  }
+  .registration {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .registration-card {
+    width: auto;
+    margin: 0 0 40px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHOPPING CART</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/5df8e5195d.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/5df8e5195d.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -63,31 +63,8 @@
 
     <div class="cart center">
         <div class="cart__content">
-            <div class="card card_mb">
-                <img src="image/catalog_product3.jpg" alt="card__image" class="card-image">
-                <div class="card__info">
-                    <a href="product.html" class="card__heading">MANGO PEOPLE T-SHIRT</a>
-                    <p class="card__price">Price: </p>
-                    <p class="card__price card__price_color">$300</p>
-                    <p class="card__text">Color: Red</p>
-                    <p class="card__text">Size: Xl</p>
-                    <p class="card__text">Quantity:	<input class="card__input" type="number" min="1" max="5" value="2"></p>
-                    <button class="card__remove-product"><img src="image/close-button.svg" alt="close-button"></button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="image/catalog_product2.jpg" alt="card__image" class="card-image">
-                <div class="card__info">
-                    <a href="product.html" class="card__heading">MANGO PEOPLE T-SHIRT</a>
-                    <p class="card__price">Price: <p class="card__price card__price_color">$300</p></p>
-                    <p class="card__text">Color: Red</p>
-                    <p class="card__text">Size: Xl</p>
-                    <p class="card__text">Quantity:	<input class="card__input" type="number" min="1" max="5" value="2"></p>
-                </div>
-                <button class="card__remove-product"><img src="image/close-button.svg" alt="close-button"></button>
-            </div>
             <div class="card__buttons">
-                <button class="card__button">CLEAR SHOPPING CART</button>
+                <button id="clear" class="card__button">CLEAR SHOPPING CART</button>
                 <button class="card__button">CONTINUE SHOPPING</button>
             </div>
         </div>
@@ -146,5 +123,5 @@
             </div>
         </div>
     </footer>
-    <script src="app.js"></script>
+    <script src="shop.js"></script>
 </body>
