@@ -60,7 +60,7 @@ class AbstractList {
     }
 
     fetchGoods () {
-        const url = 'http://localhost:3000/data/data1.json';
+        const url = 'https://store-online-gb.herokuapp.com/data/data1.json';
         return fetch(url);
     }
 }
