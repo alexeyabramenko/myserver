@@ -158,82 +158,59 @@ class Product {
 class Cart {
     cartList = []
 
-    constructor(InstanceList) {
-        let url = 'http://localhost:3000/data/data1.json';
-        let promise = fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                let element = null
-                let id = Number(localStorage.getItem('cart'));
-                let test = data.data.map(item => {
-                    if (item.id === id)
-                    element = new CartElement(item);
-                })
-            if (element != null || undefined){
-                this.cartList = element
+    constructor() {
+        this.giveData()
+            .then (res => {
+                return res.json()
+            })
+            .then (data => {
+                const id = localStorage.getItem('cart')
+                let cartProduct = null
+                const goods = data.data.map(item => {
+                    if (id == item.id) {
+                        cartProduct = item
+                    }
+                }) 
+                this.cartList = cartProduct
                 this.render()
                 this.removeProduct()
-            }
             })
+                
     }
 
     render () {
         const placeToRender = document.querySelector('.cart__content');
-        if (placeToRender) {
-            const block = document.createElement('div');
-            block.classList.add('card');
-            block.id = `card-${this.cartList._id}`;
-            block.insertAdjacentHTML('afterbegin', `<img src=${this.cartList._image} alt="card__image" class="card-image">
-            <div class="card__info">
-                <a href="product.html" class="card__heading">${this.cartList._name}</a>
-                <p class="card__price">Price: </p>
-                <p class="card__price card__price_color">${this.cartList._price}</p>
-                <p class="card__text">Color: ${this.cartList._color}</p>
-                <p class="card__text">Size: ${this.cartList._size}</p>
-                <p class="card__text">Quantity:	<input class="card__input" type="number" min="1" max="5" value="2"></p>
-                <button id=${this.cartList._id} class="card__remove-product"><img src="image/close-button.svg" alt="close-button"></button>
+        if (placeToRender && this.cartList != '') {
+            placeToRender.insertAdjacentHTML('afterbegin', 
+            `<div id="card-${this.cartList.id}" class="card">
+                <img src=${this.cartList.image} alt="card__image" class="card-image">
+                <div class="card__info">
+                    <a href="product.html" class="card__heading">${this.cartList.name}</a>
+                    <p class="card__price">Price: </p>
+                    <p class="card__price card__price_color">${this.cartList.price}</p>
+                    <p class="card__text">Color: ${this.cartList.color}</p>
+                    <p class="card__text">Size: ${this.cartList.size}</p>
+                    <p class="card__text">Quantity:	<input class="card__input" type="number" min="1" max="5" value="2"></p>
+                    <button id=${this.cartList.id} class="card__remove-product"><img src="image/close-button.svg" alt="close-button"></button>
+                </div>
             </div>`)
-            placeToRender.appendChild(block);
         }
+    }
+
+    giveData () {
+        const url = 'http://localhost:3000/data/data1.json';
+        return fetch(url);
     }
 
     removeProduct () {
-        const closeBtn = document.getElementById(`${this.cartList._id}`);
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function(event){
-                let blockRemove = document.getElementById(`card-${this.cartList._id}`);
-                blockRemove.remove();
-                localStorage.removeItem('itemCart');
-            });
-        }
+        const closeBtn = document.getElementById(`${this.cartList.id}`)
+        const idProduct = this.cartList.id
+        closeBtn.addEventListener('click', function(event) {
+            let block = document.getElementById(`card-${idProduct}`)
+            block.parentNode.removeChild(block)
+        })
     }
 }
 
-class CartElement {
-    id = '';
-    image = '';
-    name = '';
-    description = '';
-    size = '';
-    color = '';
-    price = '';
-    brand = '';
-    category = '';
-    count = '';
-
-    constructor ({id, image, name, description, size, price, color, brand, category}) {
-        this._id = id;
-        this._image = image;
-        this._name = name;
-        this._description = description;
-        this._size = size;
-        this._color = color;
-        this._price = price;
-        this._brand = brand;
-        this._category = category;
-    }
-
-} 
-
 const InstanceList = new List;
-const InstanceCart = new Cart (InstanceList);
+const InstanceCart = new Cart;
