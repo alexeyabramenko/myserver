@@ -290,7 +290,14 @@ a
     justify-content: center
     display: none
     background: none
-
+    &:hover
+        border: 1px solid $colorSelect
+        color: $colorSelect
+    &-svg
+        margin-right: 10px
+        &:hover
+            fill: $colorSelect
+    
 
 .footer
     background-color: #222224
@@ -568,14 +575,14 @@ summary::-webkit-details-marker
     flex-direction: column
     position: relative
     background: #F7F7F7
-    z-index: 1
-
-
-    &__content
-
+    // z-index: 1
     &__image
         margin-top: 11px
-        margin-bottom: 42px 
+        margin-bottom: 42px
+        // width: 100%
+        // height: 100%
+        position: absolute
+        z-index: 1   
 
     &__button_left
         background: rgba(42, 42, 42, 0.15)
@@ -587,6 +594,9 @@ summary::-webkit-details-marker
         top: 365px
         left: 0px
         font-weight: 47px
+        border: none
+        transition-duration: $hoverTransition
+
 
 
     &__button_right
@@ -598,12 +608,21 @@ summary::-webkit-details-marker
         position: absolute
         top: 365px
         right: 0px
+        border: none
         transition-duration: $hoverTransition
 
 
     &__button_left:hover,
     &__button_right:hover
         color: $colorSelect
+
+    &__button_left:focus,
+    &__button_right:focus
+        outline-style: none
+
+
+.hidden-slide
+    visibility: hidden
 
 .product__description 
     display: flex
@@ -717,7 +736,11 @@ summary::-webkit-details-marker
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13))
     position: relative
     width: 652px
+    margin-bottom: 40px
     transition: $hoverTransition
+    &:last-child
+        margin-bottom: 0px
+
     &:hover
         transform: $hoverTransform
 

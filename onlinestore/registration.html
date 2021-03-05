@@ -63,10 +63,10 @@
 
     <div class="registration center">
         <div class="registration-card">
-            <form action="" class="registration-card__from">
+            <form id="registration" class="registration-card__from">
                 <h3 class="registration-card__heading">Your Name</h3>
-                <input type="text" class="registration-card__input" placeholder="First Name" required>
-                <input type="text" class="registration-card__input" placeholder="Last Name" required>
+                <input id="name" type="text" class="registration-card__input" placeholder="First Name" required>
+                <input id="name" type="text" class="registration-card__input" placeholder="Last Name" required>
                 <div class="registration-card__gender">
                     <input id="male" class="registration-card__radio" name="gender" type="radio" required>
                     <label class="registration-card__label" for="male">Male</label>
@@ -74,12 +74,12 @@
                     <label class="registration-card__label" for="female">Female</label>
                 </div>
                 <h3 class="registration-card__heading">Login details</h3>
-                <input type="email" class="registration-card__input" placeholder="Email" required>
-                <input type="password" class="registration-card__input" placeholder="Password" required>
+                <input id="phone" class="registration-card__input" placeholder="+7(000)000-0000" required>
+                <input id="email" type="email" class="registration-card__input" placeholder="Email" required>
+                <input id="password" type="password" class="registration-card__input" placeholder="Password" required>
                 <p class="registration-card__info">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
                 <button id="btnReg" class="registration-card__button">JOIN NOW</button>
             </form>
-            
         </div>
         <div class="registration-loyality">
             <h3 class="registration-loyality__heading">LOYALTY HAS ITS PERKS</h3>
@@ -131,5 +131,4 @@
         </div>
     </footer>
     <script src="shop.js"></script>
-    <script src="button.js"></script>
 </body>
