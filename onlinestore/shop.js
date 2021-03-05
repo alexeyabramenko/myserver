@@ -69,7 +69,7 @@ class List {
 
     fetchGoods () {
         this.preloading = true
-        const url = `http://localhost:3000/data/data${this._page}.json`;
+        const url = `https://store-online-gb.herokuapp.com/data/data${this._page}.json`;
         return fetch(url)
             .then(res => {
                 return res.json()
